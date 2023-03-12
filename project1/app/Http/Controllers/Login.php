@@ -22,31 +22,17 @@ class Login extends Controller
         	'password'=>$request->input('password')
         ])){
         	$user=auth()->user();
-        	$user->api_token=Str::random(60);
-        	$user->save();
-        	return "ok";
+        	//$a=$user->api_token=Str::random(60);
+            $token=$user->createToken('Laravel8Passp');
+        	//$user->save();
+        	return $token->plainTextToken;
         }
         return "no";
     }
 
-    public function logout(Request $request){
-    	$validator=Validator::make($request->all(),[
-    		'email' => 'required|max:191|string',
-    		'password' => 'required|max:191|string'
-    	]);
-    	if ($validator->fails()) {
-    		return $validator->errors();
-    	}
-        if(auth()->attempt([
-        	'email'=>$request->input('email'),
-        	'password'=>$request->input('password')
-        ])){
-        	$user=auth()->user();
-        	$user->api_token="";
-        	$user->save();
-        	return "ok";
-        }
-        return "no";
+    public function logout(){
+        auth()->user()->tokens()->delete();
+        return "you loged out";
     }
 
     public function register(Request $request) {		
@@ -62,10 +48,10 @@ class Login extends Controller
     		$data=User::create([
     			'name'=>$request->name,
     			'email'=>$request->email,
-    			'password'=>Hash::make($request->password),
-    			'api_token' =>""
+    			'password'=>Hash::make($request->password),  			 
     		]);
-    		return "ok";
+            $token=$user->createToken('Laravel8Passp');
+    		return $request->$token;
     	}
 		
 	}
