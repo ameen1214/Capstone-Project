@@ -32,7 +32,7 @@ class Login extends Controller
 
     public function logout(){
         auth()->user()->tokens()->delete();
-        return "you loged out";
+        return "ok";
     }
 
     public function register(Request $request) {		
@@ -58,21 +58,16 @@ class Login extends Controller
 
 	public function updatePassword(Request $request){
 		$validator=Validator::make($request->all(),[
-    		'email' => 'required|max:191|string',
-    		'password' => 'required|max:191|string|unique:users',
     		'password2' => 'required|max:191|string'
     	]);
     	if ($validator->fails()) {
     		return $validator->errors();
     	}
     	else{
-    		if(auth()->attempt(['email'=>$request->input('email'),
-        		'password'=>$request->input('password')]))
-    		{
-        		User::where('email',$request->input('email'))->update(['password'=>Hash::make($request->password2)]);
-        		return "updated";
+                $user=auth()->user();    		
+        		$user->update(['password'=>Hash::make($request->password2)]);
+        		return "ok";
         	}
-        	return "could not update";
-    	}
+        	return "no";
 	}
 }
