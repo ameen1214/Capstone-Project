@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Account;
+use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Validator;
 
@@ -36,8 +37,8 @@ class PaymentsController extends Controller
     	if(!Gate::allows('delete_account')){
             abort(403);
         }
-    	$id=$request->id;
-    	$account=Account::find($id);
+    	$id=$request->user_id;
+    	$account=Account::where('user_id',$id)->first();
     	$account->delete();
         return "ok";
     }
@@ -46,46 +47,47 @@ class PaymentsController extends Controller
     	if(!Gate::allows('view_account')){
             abort(403);
         }
-    	$id=$request->id;
-    	$account=Account::where('id',$id);
-    	foreach ($account as $a) {
-    		return $a;
-    	}
+    	$id=$request->user_id;
+    	$account=Account::where('user_id',$id)->first();
+    	return $account;
     }
 
     public function view_my_account(){
     	$user=auth()->user();
         $id=$user->id;
-    	$account=Account::where('user_id',$id);
-    	foreach ($account as $a) {
-    		return $a;
-    	}
+    	$account=Account::where('user_id',$id)->first();
+    	return $account;
     }
 
     public function owing_users(){
     	if(!Gate::allows('owing_users')){
             abort(403);
         }
-    	$accounts=Account::where('remaining','>',0);
-    	foreach ($accounts as $a) {
-    		return $a;
-    	}
+    	$accounts=Account::where('remaining','>',0)->get();
+    	return $accounts;
+    }
+
+    public function view_all_payments(){
+        if(!Gate::allows('owing_users')){
+            abort(403);
+        }
+        $accounts=Account::all();
+        return $accounts;
     }
 
     public function update_account(Request $request){
     	if(!Gate::allows('update_account')){
             abort(403);
         }
-    	$id=$request->id;
+    	$id=$request->user_id;
     	$recevedNow=$request->recevedNow;
-        $account=Account::find($id);  	
+        $account=Account::where('user_id',$id)->first();  	
     	$remainingOld=$account->remaining;
         $recevedOld=$account->receved;
     	$receved=$recevedNow+$recevedOld;
     	$remaining=$remainingOld-$recevedNow;
-    	Account::where('id',$id)->update(['receved'=>$receved, 'remaining'=>$remaining]);
+        $account->update(['receved'=>$receved, 'remaining'=>$remaining]);
     	return "ok";
     }
-
 
 }

@@ -11,12 +11,7 @@ use Auth;
 
 class PaymentsTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    /*
+
     public function test_create_account(){
     	$payment=new PaymentsController();
     	//admin
@@ -34,7 +29,7 @@ class PaymentsTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['id' => '1' , 'recevedNow' => '400' ]);
+    	$request->merge(['user_id' => '4' , 'recevedNow' => '400' ]);
     	$rerult=$payment->update_account($request);
     	$this->assertEquals($rerult,"ok");
     }
@@ -45,7 +40,7 @@ class PaymentsTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['id' => '1']);
+    	$request->merge(['user_id' => '4']);
     	$rerult=$payment->delete_account($request);
     	$this->assertEquals($rerult,"ok");
     }
@@ -57,7 +52,7 @@ class PaymentsTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['id' => '1']);
+    	$request->merge(['user_id' => '4']);
     	$rerult=$payment->view_account($request);
     	$this->assertEquals($rerult,"");
     }
@@ -77,8 +72,17 @@ class PaymentsTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$rerult=$payment->owing_users();
-    	$this->assertEquals($rerult,"");
+    	$this->assertEquals($rerult,"[]");
     }
 
-    */
+    public function test_view_all_payments(){
+        $payment=new PaymentsController();
+        //admin
+        $user=User::find(2);
+        Auth::login($user);
+        $rerult=$payment->view_all_payments();
+        $this->assertEquals($rerult,"[]");
+    }
+
+
 }

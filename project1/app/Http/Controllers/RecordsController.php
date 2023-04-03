@@ -14,12 +14,12 @@ class RecordsController extends Controller
     		abort(403);
     	}
     	$validator=Validator::make($request->all(),[
-    		'name' => 'required|max:191|string',
+    		'name' => 'required|max:191|string|unique:records',
     		'address' => 'required|max:191|string',
     		'phone' => 'required|max:191|string',
     		'ill' => 'required|max:191|string',
     		'status' => 'required|max:191|string',
-    		'user_id' => 'required|max:191|string'
+    		'user_id' => 'required|max:191|string|unique:records'
     	]);
     	if ($validator->fails()) {
     		return $validator->errors();
@@ -39,38 +39,25 @@ class RecordsController extends Controller
     	if(!Gate::allows('delete_record')){
     		abort(403);
     	}
-    	$id=$request->id;
-    	$record=Record::find($id);
+    	$id=$request->user_id;
+    	$record=Record::where('user_id',$id);
     	$record->delete();
     	return "ok";
-    }
-
-    public function view_record(Request $request){
-    	if(!Gate::allows('view_record')){
-    		abort(403);
-    	}
-    	$id=$request->id;
-    	$record=Record::find($id);
-    	return $record;
     }
 
     public function view_all_records(){
     	if(!Gate::allows('view_all_records')){
     		abort(403);
     	}
-        $record=Record::all();
-        foreach ($record as $r) {
-            return $r;
-        }   
+        $records=Record::all();
+        return $records;
     }
 
     public function view_patient_record(){
         $user=auth()->user();
         $id=$user->id;
-        $a=Record::where('user_id',$id);
-        foreach ($a as $b) {
-            return $b;
-        }      
+        $a=Record::where('user_id',$id)->first();
+        return $a;      
     }
 
     public function search_record(Request $request){
@@ -78,10 +65,8 @@ class RecordsController extends Controller
     		abort(403);
     	}
     	$name=$request->name;
-    	$record=Record::where('name',$name);
-    	foreach ($record as $a) {
-            return $a;
-        }    
+    	$record=Record::where('name','like',$name);
+    	return $record->first();   
     }
 
     public function update_record(Request $request){
@@ -94,8 +79,8 @@ class RecordsController extends Controller
     	if ($validator->fails()) {
     		return $validator->errors();
     	}
-    	$id=$request->id;
-    	Record::where('id',$id)->update(['status'=>$request->input('status')]);
+    	$id=$request->user_id;
+    	Record::where('user_id',$id)->update(['status'=>$request->input('status')]);
     	return "ok"; 
     }	
 }

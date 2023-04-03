@@ -10,16 +10,20 @@ use Auth;
 
 class LoginTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    /*
+    //Note: please delete this user and change id each time you test or input new data.
+
+    public function test_register(){
+        $controller= new Login();
+        $request=$this->app['request'];
+        $request->merge(['name' => 'user1' , 'email' => 'email1@email.com' , 'password' => 'password1' ]);
+        $rerult=$controller->register($request);
+        $this->assertEquals($rerult,"ok");
+    }
+
     public function test_login(){
     	$controller= new Login();
     	$request=$this->app['request'];
-    	$request->merge(['email' => 'email2' , 'password' => 'password2']);
+    	$request->merge(['email' => 'email1@email.com' , 'password' => 'passwordNotCorrect']);
     	$rerult=$controller->login($request);
     	$this->assertEquals($rerult,"no");
     }
@@ -27,29 +31,32 @@ class LoginTest extends TestCase
     public function test_logout(){
     	$controller= new Login();
     	//user not admin
-    	$user=User::find(4);
+    	$user=User::find(16);
     	Auth::login($user);
     	$rerult=$controller->logout();
     	$this->assertEquals($rerult,"ok");
-    }
-    
-    public function test_register(){
-    	$controller= new Login();
-    	$request=$this->app['request'];
-    	$request->merge(['name' => 'sally' , 'email' => 't@gmail.com' , 'password' => 'pass111' ]);
-    	$rerult=$controller->register($request);
-    	$this->assertEquals($rerult,"ok");
-    }
+    }    
 
     public function test_updatePassword(){
     	$controller= new Login();
     	//user not admin
-    	$user=User::find(6);
+    	$user=User::find(16);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['password2' => 'passr3533' ]);  	
+    	$request->merge(['password2' => 'password2' ]);  	
     	$rerult=$controller->updatePassword($request);
     	$this->assertEquals($rerult,"ok");
     }
-    */
+
+    public function test_updateEmail(){
+        $controller= new Login();
+        //user not admin
+        $user=User::find(16);
+        Auth::login($user);
+        $request=$this->app['request'];
+        $request->merge(['email2' => 'email2@email.com' ]);     
+        $rerult=$controller->updateEmail($request);
+        $this->assertEquals($rerult,"ok");
+    }
+
 }

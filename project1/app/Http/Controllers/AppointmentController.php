@@ -66,9 +66,7 @@ class AppointmentController extends Controller
     //view
     public function view_appointments(){
     	$a=Available_appointment::all();
-    	foreach ($a as $b) {
-    		return $b;
-    	}	
+    	return $a;	
     }
 
     //---------------------------------------------------------------------
@@ -88,7 +86,13 @@ class AppointmentController extends Controller
             'date'=>$request->date,
             'user_id'=>$user->id
         ]);
-        return "ok";
+        $a=Available_appointment::where('date',$request->input('date'))->where('time',$request->input('time'));
+        $d=$a->delete();
+        $deleted="could not book this appointment";
+        if($d==1){
+            $deleted="ok";
+        }
+        return $deleted;
     }
 
     //unbook appointment
@@ -104,6 +108,10 @@ class AppointmentController extends Controller
         $id=$user->id;
         $a=appointment::where('date',$request->input('date'))->where('time',$request->input('time'))->where('user_id',$id);
         $d=$a->delete();
+        $a=new  Available_appointment;
+        $a->date=$request->date;
+        $a->time=$request->time;
+        $a->save();
         $deleted="could not delete";
         if($d==1){
             $deleted="ok";
@@ -115,10 +123,8 @@ class AppointmentController extends Controller
     public function view_booked_appointments(){
         $user=auth()->user();
         $id=$user->id;
-        $a=appointment::where('user_id',$id);
-        foreach ($a as $b) {
-            return $b;
-        }   
+        $a=appointment::where('user_id',$id)->get();
+        return $a;   
     }
 
     //view all booked appointments
@@ -127,8 +133,6 @@ class AppointmentController extends Controller
             abort(403);
         }
         $a=appointment::all();
-        foreach ($a as $b) {
-            return $b;
-        }   
+        return $a;
     }
 }

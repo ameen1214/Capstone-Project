@@ -11,7 +11,7 @@ class Login extends Controller
 {
     public function login(Request $request){
     	$validator=Validator::make($request->all(),[
-    		'email' => 'required|max:191|string',
+    		'email' => 'required|max:191|email',
     		'password' => 'required|max:191|string'
     	]);
     	if ($validator->fails()) {
@@ -38,7 +38,7 @@ class Login extends Controller
     public function register(Request $request) {		
 		$validator=Validator::make($request->all(),[
     		'name' => 'required|max:191|string',
-    		'email' => 'required|max:191|string|unique:users',
+    		'email' => 'required|max:191|email|unique:users',
     		'password' => 'required|max:191|string'
     	]);
     	if ($validator->fails()) {
@@ -50,10 +50,9 @@ class Login extends Controller
     			'email'=>$request->email,
     			'password'=>Hash::make($request->password),  			 
     		]);
-            $token=$user->createToken('Laravel8Passp');
-    		return $request->$token;
+            return "ok";
     	}
-		
+		return "no";
 	}
 
 	public function updatePassword(Request $request){
@@ -70,4 +69,24 @@ class Login extends Controller
         	}
         	return "no";
 	}
+
+    public function updateEmail(Request $request){
+        $validator=Validator::make($request->all(),[
+            'email2' => 'required|max:191|string|email'
+        ]);
+        if ($validator->fails()) {
+            return $validator->errors();
+        }
+        else{
+                $user=auth()->user();           
+                $user->update(['email'=>$request->email2]);
+                return "ok";
+            }
+            return "no";
+    }
+
+    public function get_user_role(){
+        $user=auth()->user(); 
+        return response()->json(['role'=>$user->role]);
+    }
 }

@@ -11,13 +11,7 @@ use Auth;
 
 class RecordTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    
-    /*
+
     public function test_create_record(){
     	$record=new RecordsController();
     	//admin
@@ -35,7 +29,7 @@ class RecordTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['id' => '8' , 'status' => 'treatment completed']);
+    	$request->merge(['user_id' => '4' , 'status' => 'treatment completed']);
     	$rerult=$record->update_record($request);
     	$this->assertEquals($rerult,"ok");
     }
@@ -46,21 +40,11 @@ class RecordTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$request=$this->app['request'];
-    	$request->merge(['id' => '6']);
+    	$request->merge(['user_id' => '4']);
     	$rerult=$record->delete_record($request);
     	$this->assertEquals($rerult,"ok");
     }
 
-    public function test_view_record(){
-    	$record=new RecordsController();
-    	//admin
-    	$user=User::find(2);
-    	Auth::login($user);
-    	$request=$this->app['request'];
-    	$request->merge(['id' => '6']);
-    	$rerult=$record->view_record($request);
-    	$this->assertEquals($rerult,"");
-    }
 
     public function test_view_patient_record(){
     	$record=new RecordsController();
@@ -77,7 +61,7 @@ class RecordTest extends TestCase
     	$user=User::find(2);
     	Auth::login($user);
     	$rerult=$record->view_all_records();
-    	$this->assertEquals($rerult,"");
+    	$this->assertEquals($rerult,"[]");
     }
     
     public function test_search_record(){
@@ -90,7 +74,4 @@ class RecordTest extends TestCase
     	$rerult=$record->search_record($request);
     	$this->assertEquals($rerult,"");
     }
-
-    */
-    
 }
