@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a8ec05c-3837-489b-85b8-52be52e08c74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/RestClient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/RestClient1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/RestClient2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/RestClient3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clinic App last update.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/UPDATED.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/jfx-impl_backup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/AdminBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/AdminBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Appointments.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/Appointments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/BackEnd.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/BackEnd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Bar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/Bar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Payments.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/Payments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/Records.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/Records.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/RestClient$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/RestClient$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/RestClient$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/RestClient$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/RestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/RestClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/UserBar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/UserBar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/UserBar$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/UserBar$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/restclient/UserBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/restclient/UserBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/jfx-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/jfx-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restclient/AdminBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restclient/AdminBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restclient/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/restclient/Bar.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2O9sr8CRJOJZaJMoEvbxYgost4K" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amin/Desktop/Capstone/Capstone-Project/Clinic App last update&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <module name="Clinic App last update" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ComposePreviewRunConfiguration">
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable " />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Java Scratch">
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a8ec05c-3837-489b-85b8-52be52e08c74" name="Changes" comment="" />
+      <created>1680984328884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680984328884</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

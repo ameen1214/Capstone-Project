@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RestClient3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run166585348/RestClient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
